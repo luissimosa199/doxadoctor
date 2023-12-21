@@ -1,6 +1,7 @@
 import DoctorSearchInput from "@/components/DoctorSearchInput";
 import DoctorsCard from "@/components/DoctorsCard";
 import DoctorsFilters from "@/components/DoctorsFilters";
+import React from "react";
 
 export default function Home() {
   return (
@@ -18,15 +19,12 @@ export default function Home() {
         {[...Array(14)].map((e, idx: number) => {
           if (idx === 7) {
             return (
-              <>
-                <li
-                  key={`ad_${idx}`}
-                  className="shadow-md bg-gray-300"
-                >
+              <React.Fragment key={`ad_${idx}`}>
+                <li className="shadow-md bg-gray-300">
                   <div className="h-96 md:h-[280px] w-screen sm:max-w-sm md:w-[280px]"></div>
                 </li>
-                <DoctorsCard key={idx} />
-              </>
+                <DoctorsCard />
+              </React.Fragment>
             );
           }
 

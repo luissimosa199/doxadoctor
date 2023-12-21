@@ -3,14 +3,16 @@ import React from "react";
 
 const DoctorPageHeader = () => {
   return (
-    <div className="p-4 flex flex-col items-end bg-white md:flex-row">
+    <div className="pb-2 md:p-4 flex flex-col items-end bg-white md:flex-row">
       <div className="relative mx-auto md:mx-0">
-        <div className="w-80 md:w-96 h-[400px] md:h-96 bg-gray-300 mb-2 overflow-hidden z-0 ">
+        <div className="w-screen md:w-96 h-[400px] md:h-96 bg-gray-300 mb-2 overflow-hidden z-0 ">
           <Image
             src="/profile.jpg"
             alt="profile picture"
-            width={320}
-            height={320}
+            className="object-cover object-center "
+            fill
+            // width={320}
+            // height={320}
           />
         </div>
         <div className="absolute top-0 w-full h-full bg-gradient-to-t from-black via-transparent z-10"></div>
