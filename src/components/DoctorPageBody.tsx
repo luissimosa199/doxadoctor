@@ -5,7 +5,7 @@ import DoctorPageButtons from "./DoctorPageButtons";
 import CurrentTabContent from "./CurrentTabContent";
 import { Tabs } from "@/types";
 
-const DoctorPageBody = () => {
+const DoctorPageBody = ({ visiblePhone }: { visiblePhone?: boolean }) => {
   const [currentTab, setCurrentTab] = useState<Tabs>("informacion");
 
   return (
@@ -17,7 +17,7 @@ const DoctorPageBody = () => {
         />
       </div>
 
-      <CurrentTabContent currentTab={currentTab} />
+      <CurrentTabContent visiblePhone={visiblePhone} currentTab={currentTab} />
     </div>
   );
 };

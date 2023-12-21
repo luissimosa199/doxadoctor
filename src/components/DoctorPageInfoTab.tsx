@@ -3,9 +3,16 @@ import React, { useState } from "react";
 import ClockSvg from "./icons/ClockSvg";
 import PhoneSvg from "./icons/PhoneSvg";
 import LocationSvg from "./icons/LocationSvg";
+import { useRouter } from "next/navigation";
 
-const DoctorPageInfoTab = () => {
-  const [showNumber, setShowNumber] = useState<boolean>();
+const DoctorPageInfoTab = ({ visiblePhone }: { visiblePhone?: boolean }) => {
+  const [showNumber, setShowNumber] = useState<boolean>(!!visiblePhone);
+  const router = useRouter();
+
+  const handleShowPhone = () => {
+    router.replace("/telefono/medicos/slug#phone");
+    setShowNumber(true);
+  };
 
   return (
     <section className="p-4">
@@ -25,9 +32,7 @@ const DoctorPageInfoTab = () => {
           {!showNumber && (
             <button
               className="text-blue-500 font-semibold"
-              onClick={() => {
-                setShowNumber(true);
-              }}
+              onClick={handleShowPhone}
             >
               Mostrar número
             </button>
