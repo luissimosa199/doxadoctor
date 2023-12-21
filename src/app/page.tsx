@@ -4,7 +4,7 @@ import DoctorsFilters from "@/components/DoctorsFilters";
 
 export default function Home() {
   return (
-    <main className="p-8 bg-zinc-50">
+    <main className="md:p-8 bg-zinc-50">
       <div className="max-w-4xl mx-auto">
         {/* <div className="w-full bg-gray-300 h-48 mb-4"></div> */}
 
@@ -23,7 +23,7 @@ export default function Home() {
                   key={`ad_${idx}`}
                   className="shadow-md bg-gray-300"
                 >
-                  <div className="h-[280px] w-[280px]"></div>
+                  <div className="h-96 md:h-[280px] w-screen sm:max-w-sm md:w-[280px]"></div>
                 </li>
                 <DoctorsCard key={idx} />
               </>

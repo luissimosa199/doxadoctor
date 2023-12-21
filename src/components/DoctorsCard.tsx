@@ -26,7 +26,7 @@ const DoctorsCard = () => {
           href={`/usuarios/${user.slug}`}
           className=""
         >
-          <div className="h-[280px] w-[280px] overflow-hidden relative">
+          <div className="h-96 md:h-[280px] w-screen sm:max-w-sm md:w-[280px] overflow-hidden relative">
             {/* <Image
               alt={`foto de ${user.name}`}
               src={user.image}
