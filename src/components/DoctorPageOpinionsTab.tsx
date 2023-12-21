@@ -8,13 +8,13 @@ const DoctorPageOpinionsTab = () => {
         if ((idx + 1) % 3 === 0 && idx !== 0) {
           return (
             <div
-              key={idx}
+              key={`comment_${idx}`}
               className="h-48 w-full bg-gray-300 mb-8"
             ></div>
           );
         }
 
-        return <DoctorPageOpinionCard key={idx} />;
+        return <DoctorPageOpinionCard key={`comment_${idx}`} />;
       })}
     </div>
   );

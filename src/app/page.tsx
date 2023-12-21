@@ -20,7 +20,10 @@ export default function Home() {
           if (idx === 7) {
             return (
               <React.Fragment key={`ad_${idx}`}>
-                <li className="shadow-md bg-gray-300">
+                <li
+                  key={`doc_${idx}`}
+                  className="shadow-md bg-gray-300"
+                >
                   <div className="h-96 md:h-[280px] w-screen sm:max-w-sm md:w-[280px]"></div>
                 </li>
                 <DoctorsCard />
@@ -28,7 +31,7 @@ export default function Home() {
             );
           }
 
-          return <DoctorsCard key={idx} />;
+          return <DoctorsCard key={`doc_${idx}`} />;
         })}
       </ul>
     </main>

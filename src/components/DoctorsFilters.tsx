@@ -16,7 +16,7 @@ const DoctorsFilters = () => {
       <ul className="flex flex-wrap">
         {tags.map((tag) => (
           <li
-            key={tag}
+            key={`tag_${tag}`}
             className="flex items-center justify-center border border-gray-100 w-1/2 h-12"
           >
             <label
