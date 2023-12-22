@@ -4,6 +4,8 @@ import DoctorCardButtons from "./DoctorCardButtons";
 import LocationSvg from "./icons/LocationSvg";
 import StarSvg from "./icons/StarSvg";
 import FilledStarSvg from "./icons/FilledStarSvg";
+import DoctorCardOnlineIndicator from "./DoctorCardOnlineIndicator";
+import Image from "next/image";
 
 const user = {
   name: "Alejandra Tomasi",
@@ -24,12 +26,12 @@ const DoctorsCard = () => {
           className=""
         >
           <div className="h-96 md:h-[280px] w-screen sm:max-w-sm md:w-[280px] overflow-hidden relative">
-            {/* <Image
-              alt={`foto de ${user.name}`}
-              src={user.image}
+            <Image
+              alt={`foto de perfil`}
+              src="/profile2.jpg"
               fill
               className="absolute object-cover"
-            /> */}
+            />
             <div className="w-full h-full bg-gray-200"></div>
             <div className="flex items-center gap-2 absolute bottom-2 right-2">
               <p className="text-xs text-center leading-none bg-blue-300 px-2 py-1 rounded-md font-semibold">
@@ -41,6 +43,7 @@ const DoctorsCard = () => {
         <Link href={`/usuarios/${user.slug}`}>
           <div className="flex flex-col items-center">
             <p className="text-lg font-medium">{user.name}</p>
+            <DoctorCardOnlineIndicator />
             <div className="flex mb-2 gap-1 justify-center">
               {[...Array(4)].map((_, idx) => {
                 return <FilledStarSvg key={`star_${idx}`} />;
