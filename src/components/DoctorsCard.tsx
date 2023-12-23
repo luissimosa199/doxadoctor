@@ -20,7 +20,7 @@ const user = {
 const DoctorsCard = () => {
   return (
     <li className="shadow-md bg-white">
-      <div className="flex flex-col items-center gap-y-2 w-full">
+      <div className="flex flex-col items-center gap-y-2">
         <Link
           href={`/doctor`}
           className=""
